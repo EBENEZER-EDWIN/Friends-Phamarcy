@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <rect x="80" y="80" width="1440" height="740" rx="24" fill="white"/>
+  <rect x="120" y="120" width="260" height="640" rx="20" fill="#0F172A"/>
+  <rect x="430" y="120" width="540" height="220" rx="18" fill="#F8FAFC"/>
+  <rect x="1010" y="120" width="430" height="220" rx="18" fill="#F8FAFC"/>
+  <rect x="430" y="380" width="1010" height="360" rx="18" fill="#F8FAFC"/>
+  <rect x="470" y="200" width="220" height="40" rx="12" fill="#DBEAFE"/>
+  <rect x="470" y="260" width="180" height="18" rx="9" fill="#B6C7FF"/>
+  <rect x="1040" y="200" width="260" height="40" rx="12" fill="#DCFCE7"/>
+  <rect x="1040" y="260" width="180" height="18" rx="9" fill="#BBF7D0"/>
+  <text x="470" y="515" fill="#0F172A" font-size="28" font-family="Arial">Inventory list</text>
+  <text x="470" y="610" fill="#0F172A" font-size="22" font-family="Arial">Paracetamol 500mg</text>
+  <text x="470" y="660" fill="#0F172A" font-size="22" font-family="Arial">Vitamin C 1000mg</text>
+  <text x="470" y="710" fill="#0F172A" font-size="22" font-family="Arial">Cough Syrup</text>
+</svg>
