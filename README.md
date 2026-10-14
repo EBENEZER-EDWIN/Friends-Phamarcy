@@ -1,55 +1,86 @@
-This project is a full mini pharmacy POS system built with React + Vite on the frontend and Node.js + Express + Prisma + SQLite on the backend.
+# Friends Pharmacy POS
 
-Features included:
-- Inventory management with stock and low-stock alerts
-- Sales / POS checkout with cart, discounts, and payment types
-- Customers and loyalty tracking
-- Prescriptions management with validity tracking
-- User roles and login (Admin / Manager / Cashier)
-- Sales reports and dashboard summaries
-- Returns and audit logs
-- Receipt generation support (PDF-ready print flow)
+A full mini pharmacy point-of-sale system built with React + Vite on the frontend and Node.js + Express + Prisma + SQLite on the backend.
+
+## Features
+- Inventory management with stock tracking and low-stock alerts
+- POS checkout with cart, discounts, and payment selection
+- Customer management and loyalty tracking
+- Prescription records with expiry and status tracking
+- User login and role-based access (Admin, Manager, Cashier)
+- Sales dashboard and revenue reports
+- Returns-ready sales flow and audit log tracking
+- PDF-friendly receipt generation workflow
 - Docker support for local development
 - Seeded demo data for quick testing
 
-Project structure:
-- frontend/: React + Vite front-end
-- backend/: Express + Prisma + SQLite API
-- docs/screenshots/: sample UI screenshots (SVG mockups)
+## Tech stack
+- Frontend: React + Vite + CSS modules / custom CSS
+- Backend: Node.js + Express + Prisma + SQLite
+- Auth: JWT tokens with bcrypt password hashing
+- Database: SQLite for local/demo use
 
-Quick start:
-1. Install dependencies:
+## Project structure
+- backend/: Express API and Prisma database config
+- frontend/: React app and UI screens
+- docs/screenshots/: sample UI mockups for dashboard, inventory, and checkout
+- .env.example: root environment template
+- docker-compose.yml: local Docker setup
+
+## Prerequisites
+- Node.js 18+
+- npm 9+
+- Git
+
+## Quick start
+1. Open a terminal in the project root.
+2. Install dependencies:
    npm install
-2. Create your environment file:
+3. Create environment files:
    cp .env.example .env
-3. Push the Prisma schema to SQLite:
+   cp backend/.env.example backend/.env
+4. Generate Prisma client and initialize SQLite DB:
    npm run db:push
-4. Seed demo data:
+5. Seed the database with demo data:
    npm run db:seed
-5. Start app:
+6. Start the app:
    npm run dev
 
-The frontend will run on http://localhost:5173 and the backend on http://localhost:4000.
+This will start:
+- Frontend: http://localhost:5173
+- Backend: http://localhost:4000
 
-Default demo login:
+## Demo login
 - Email: admin@friendspharmacy.com
 - Password: Password123!
 
-If you want to run only the backend:
-- npm run start --workspace backend
+## Docker option
+You can also run the app with Docker:
 
-If you want to run only the frontend:
-- npm run dev --workspace frontend
+1. Build and start containers:
+   docker-compose up --build
+2. Access the frontend at:
+   http://localhost:5173
+3. The backend API will be available at:
+   http://localhost:4000/api
 
-Docker:
-- docker-compose up --build
+## Useful commands
+- Run only backend:
+  npm run start --workspace backend
+- Run only frontend:
+  npm run dev --workspace frontend
+- Regenerate Prisma client:
+  npm run prisma:generate
+- Reapply Prisma schema:
+  npm run db:push
 
-Screenshots:
+## Screenshots
+The repo includes example UI mockups here:
 - docs/screenshots/pos-dashboard.svg
 - docs/screenshots/inventory.svg
 - docs/screenshots/checkout.svg
 
-API overview:
+## API overview
 - POST /api/auth/login
 - GET /api/dashboard
 - GET /api/products
@@ -64,10 +95,10 @@ API overview:
 - GET /api/users
 - GET /api/audit-logs
 
-Important notes:
-- The SQLite database is created at backend/prisma/dev.db.
-- Prisma schema and seed script are in backend/prisma.
-- For a real production deployment, switch to PostgreSQL and configure secure JWT secrets and environment variables.
+## Notes
+- SQLite is intended for demo/local development.
+- For production, migrate to PostgreSQL and secure JWT secrets.
+- The database file is generated at backend/prisma/dev.db.
 
-License:
-This project is intended for educational/demo usage.
+## License
+This project is intended for education and demonstration purposes.
